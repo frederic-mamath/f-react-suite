@@ -49,13 +49,17 @@
     "@storybook/react": "^6.1.18",
     "babel-plugin-macros": "^2.8.0",
     "cross-env": "^7.0.3",
+    "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
     "react-test-renderer": "^17.0.1",
     "require-context.macro": "^1.2.2"
   },
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/frederic-mamath/f-react-suite.git"
