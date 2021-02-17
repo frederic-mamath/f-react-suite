@@ -6,6 +6,9 @@ A kit of components for React.
 
 ## Road Map
 
+- [x] Export library
+- [x] Add Sass
+- [ ] Add import by index
 - [ ] Popover
 
 ## Sources
