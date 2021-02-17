@@ -13,4 +13,5 @@ A kit of components for React.
 
 ## Sources
 
-- [How to react a react component library](https://fathomtech.io/blog/create-a-react-component-library-using-create-react-app/)
+- [How to react a React component library](https://fathomtech.io/blog/create-a-react-component-library-using-create-react-app/)
+- [How to add TypeScript and SASS](https://blog.harveydelaney.com/creating-your-own-react-component-library/)
