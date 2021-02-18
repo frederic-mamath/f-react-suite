@@ -1,67 +1,61 @@
 {
   "name": "f-react-suite",
-  "version": "0.1.1",
-  "private": false,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "web-vitals": "^1.0.1"
-  },
+  "version": "0.2.0",
+  "description": "A kit of components for React",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "clean": "rimraf dist",
-    "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__"
+    "build": "rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "storybook:export": "build-storybook",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frederic-mamath/f-react-suite.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [
+    "kit",
+    "components",
+    "react"
+  ],
+  "author": "Frederic MAMATH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frederic-mamath/f-react-suite/issues"
   },
+  "homepage": "https://github.com/frederic-mamath/f-react-suite#readme",
   "devDependencies": {
-    "@babel/cli": "^7.12.16",
-    "@babel/preset-env": "^7.12.16",
-    "@babel/preset-react": "^7.12.13",
-    "@storybook/addon-actions": "^6.1.18",
-    "@storybook/addon-essentials": "^6.1.18",
-    "@storybook/addon-links": "^6.1.18",
-    "@storybook/addon-storyshots": "^6.1.18",
-    "@storybook/node-logger": "^6.1.18",
-    "@storybook/preset-create-react-app": "^3.1.6",
+    "@babel/core": "^7.12.17",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
     "@storybook/react": "^6.1.18",
-    "babel-plugin-macros": "^2.8.0",
-    "cross-env": "^7.0.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.2",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2",
-    "react-test-renderer": "^17.0.1",
-    "require-context.macro": "^1.2.2"
+    "rollup": "^2.39.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "sass-loader": "^10.1.1",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5"
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/frederic-mamath/f-react-suite.git"
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
